@@ -34,18 +34,18 @@ class SiteController extends Controller
         ];
     }
 
-    public function actions()
-    {
-        return [
-            'error' => [
-                'class' => 'yii\web\ErrorAction',
-            ],
-            'captcha' => [
-                'class' => 'yii\captcha\CaptchaAction',
-                'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
-            ],
-        ];
-    }
+//    public function actions()
+//    {
+//        return [
+//            'error' => [
+//                'class' => 'yii\web\ErrorAction',
+//            ],
+//            'captcha' => [
+//                'class' => 'yii\captcha\CaptchaAction',
+//                'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
+//            ],
+//        ];
+//    }
 
     public function actionIndex()
     {
@@ -92,5 +92,8 @@ class SiteController extends Controller
     public function actionAbout()
     {
         return $this->render('about');
+    }
+    public function actionCatalog(){
+        return $this->render('catalog');
     }
 }

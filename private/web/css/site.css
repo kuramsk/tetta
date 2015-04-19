@@ -1,6 +1,14 @@
 html,
 body {
     height: 100%;
+    width: 100%;
+    background: url("/images/background.jpg") center 100% no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
 }
 
 .wrap {
@@ -11,9 +19,23 @@ body {
 }
 
 .wrap > .container {
-    padding: 70px 15px 20px;
+    padding: 20px 15px 20px;
 }
-
+.container-bg{
+    padding: 0!important;
+    background: url("/images/ipx-bg-lightgray.png");
+}
+.navbar-modified {
+    background: url("/images/ipx-bg-darkgray.png");
+    border-color: none;
+    border-radius: 0px;
+    border-width: 0px;
+}
+.carousel-head{
+    height: 300px;
+    overflow: hidden;
+    margin-bottom: 0;
+}
 .footer {
     height: 60px;
     background-color: #f5f5f5;
@@ -88,4 +110,55 @@ a.desc:after {
     border-left: 3px solid #eed3d7;
     padding: 10px 20px;
     margin: 0 0 15px 0;
+}
+
+.pb30{
+    padding-bottom: 30px;
+}
+
+.car-offer{
+    height: 300px;
+    background: url("/images/ipx-bg-gray.png");
+    position: relative;
+}
+.car-offer-caption{
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    display: block;
+    height: 10%;
+    color: #ffffff;
+    font-size: 16px;
+    background: url("/images/ipx-bg-gray.png");
+    padding: 5px 7px;
+}
+.car-offer-description{
+    display:block;
+    width: 100%;
+    top: 75%;
+    height: 25%;
+    color: #ffffff;
+    font-size: 14px;
+    position: absolute;
+    padding: 12px 7px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.car-offer-price{
+    display: block;
+    width: 100%;
+    position: absolute;
+    bottom: 25%;
+    color: #ffffff;
+    height: 10%;
+    font-size: 16px;
+    background: url("/images/ipx-bg-gray.png");
+    padding: 12px 7px;
+}
+.car-offer-price span{
+    display: inline;
+    background: url("/images/ipx-bg-gray.png");
+    box-shadow: 10px 0 0 orange, -10px 0 0 grey;
+    padding-bottom: 4px;
 }

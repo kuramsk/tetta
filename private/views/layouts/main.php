@@ -18,41 +18,71 @@ AppAsset::register($this);
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
+
     <?php $this->head() ?>
 </head>
-<body>
 
+<body>
 <?php $this->beginBody() ?>
     <div class="wrap">
-        <?php
-            NavBar::begin([
-                'brandLabel' => 'My Company',
-                'brandUrl' => Yii::$app->homeUrl,
-                'options' => [
-                    'class' => 'navbar-inverse navbar-fixed-top',
-                ],
-            ]);
-            echo Nav::widget([
-                'options' => ['class' => 'navbar-nav navbar-right'],
-                'items' => [
-                    ['label' => 'Home', 'url' => ['/site/index']],
-                    ['label' => 'About', 'url' => ['/site/about']],
-                    ['label' => 'Contact', 'url' => ['/site/contact']],
-                    Yii::$app->user->isGuest ?
-                        ['label' => 'Login', 'url' => ['/site/login']] :
-                        ['label' => 'Logout (' . Yii::$app->user->identity->username . ')',
-                            'url' => ['/site/logout'],
-                            'linkOptions' => ['data-method' => 'post']],
-                ],
-            ]);
-            NavBar::end();
-        ?>
+        <div class="container container-bg">
+                <div class="row">
+                    <div class="col-md-12 visible-md visible-lg">
+                        <div id="carousel-example-generic" class="carousel slide carousel-head" data-ride="carousel">
+                            <!-- Indicators -->
+                            <ol class="carousel-indicators">
+                                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                            </ol>
 
-        <div class="container">
-            <?= Breadcrumbs::widget([
-                'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-            ]) ?>
-            <?= $content ?>
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner">
+                                <div class="item absolute-center active" style="height: 300px; background: url(/images/carusel-img-0.jpg) center 100% no-repeat"></div>
+                                <div class="item absolute-center" style="height: 300px; background: url(/images/carusel-img-1.jpg) center 100% no-repeat"></div>
+                                <div class="item absolute-center" style="height: 300px; background: url(/images/carusel-img-2.jpg) center 100% no-repeat"></div>
+                            </div>
+
+                            <!-- Controls -->
+                            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left"></span>
+                            </a>
+                            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right"></span>
+                            </a>
+                        </div>
+                    </div>
+
+            </div>
+            <?php
+                NavBar::begin([
+                    'brandLabel' => 'lol Wto?',
+                    'brandUrl' => Yii::$app->homeUrl,
+                    'options' => [
+                        'class' => 'navbar-modified',
+                    ],
+                ]);
+                echo Nav::widget([
+                    'options' => ['class' => 'navbar-nav navbar-right'],
+                    'items' => [
+                        ['label' => 'Home', 'url' => ['/site/index']],
+                        ['label' => 'About', 'url' => ['/site/about']],
+                        ['label' => 'Contact', 'url' => ['/site/contact']],
+                        Yii::$app->user->isGuest ?
+                            ['label' => 'Login', 'url' => ['/site/login']] :
+                            ['label' => 'Logout (' . Yii::$app->user->identity->username . ')',
+                                'url' => ['/site/logout'],
+                                'linkOptions' => ['data-method' => 'post']],
+                    ],
+                ]);
+                NavBar::end();
+            ?>
+            <div class="container">
+                <div class="row">
+
+                <?= $content ?>
+                </div>
+            </div>
         </div>
     </div>
 
