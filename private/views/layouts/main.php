@@ -56,23 +56,16 @@ AppAsset::register($this);
             </div>
             <?php
                 NavBar::begin([
-                    'brandLabel' => 'lol Wto?',
-                    'brandUrl' => Yii::$app->homeUrl,
                     'options' => [
                         'class' => 'navbar-modified',
                     ],
                 ]);
                 echo Nav::widget([
-                    'options' => ['class' => 'navbar-nav navbar-right'],
+                    'options' => ['class' => 'navbar-nav navbar-left'],
                     'items' => [
-                        ['label' => 'Home', 'url' => ['/site/index']],
-                        ['label' => 'About', 'url' => ['/site/about']],
-                        ['label' => 'Contact', 'url' => ['/site/contact']],
-                        Yii::$app->user->isGuest ?
-                            ['label' => 'Login', 'url' => ['/site/login']] :
-                            ['label' => 'Logout (' . Yii::$app->user->identity->username . ')',
-                                'url' => ['/site/logout'],
-                                'linkOptions' => ['data-method' => 'post']],
+                        ['label' => 'Главная', 'url' => ['/site/index']],
+                        ['label' => 'Каталог', 'url' => ['/site/catalog']],
+                        ['label' => 'О сайте', 'url' => ['/site/about']]
                     ],
                 ]);
                 NavBar::end();
