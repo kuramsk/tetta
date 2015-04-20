@@ -45,7 +45,12 @@ $config = [
                 ''=> 'site/index',
                 'login' => 'site/login',
                 'about' => 'site/about',
-                'catalog' => 'site/catalog'
+                'catalog' => 'site/catalog',
+                'orders/<id:\w+>' => 'orders/act',
+                'catalog/<vendor:\w+>/<model:\w+>/<complectation:\w+>/<id:\w+>' => '/site/car-view',
+                'catalog/<vendor:\w+>/<model:\w+>/<complectation:\w+>' => '/site/catalog',
+                'catalog/<vendor:\w+>/<model:\w+>' => '/site/catalog',
+                'catalog/<vendor:\w+>' => '/site/catalog'
             ),
         ),
     ],
@@ -58,7 +63,10 @@ if (YII_ENV_DEV) {
     $config['modules']['debug'] = 'yii\debug\Module';
 
     $config['bootstrap'][] = 'gii';
-    $config['modules']['gii'] = 'yii\gii\Module';
+    $config['modules']['gii'] = [
+        'class' => 'yii\gii\Module',
+        'allowedIPs' => ['127.0.0.1', '::1', '192.168.0.*', '192.168.0.193'],
+    ];
 }
 
 return $config;

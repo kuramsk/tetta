@@ -187,6 +187,15 @@ a.desc:after {
 .select-active{
     background-color: red;
 }
+.select-inactive{
+    background: linear-gradient(-45deg, transparent 49.9%, #4b4b4b 49.9%, #4b4b4b 60%, transparent 60%), linear-gradient(-45deg, #4b4b4b 10%, #4e4e4e 10%);
+    background-size: 1em 1em;
+    background-color: #4b4b4b;
+    color: #7b7b7b;
+}
+.select-inactive a{
+    color: #7b7b7b!important;
+}
 .select a{
     color: #ffffff;
     width: 100%;
@@ -194,4 +203,10 @@ a.desc:after {
 .select a:hover{
     color: #ffffff;
     width: 100%;
+}
+.icon-bar{
+    background-color: white;
+}
+.navbar-toggle{
+    background-color: #2c2c2c!important;
 }

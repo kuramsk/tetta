@@ -52,8 +52,7 @@ AppAsset::register($this);
                             </a>
                         </div>
                     </div>
-
-            </div>
+                </div>
             <?php
                 NavBar::begin([
                     'options' => [
@@ -81,12 +80,14 @@ AppAsset::register($this);
 
     <footer class="footer">
         <div class="container">
-            <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
+            <p class="pull-left">&copy; Frank Howdy <?= date('Y') ?></p>
             <p class="pull-right"><?= Yii::powered() ?></p>
         </div>
     </footer>
 
 <?php $this->endBody() ?>
+<script src="/js/script.js"></script>
+
 </body>
 </html>
 <?php $this->endPage() ?>

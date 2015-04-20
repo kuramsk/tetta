@@ -13,20 +13,23 @@ class m150419_224805_create_data_base extends Migration
         };
 
         $this->createTable('vendor',[
-                'id' => Schema::TYPE_PK,
-                'name' => Schema::TYPE_STRING,
+            'id' => Schema::TYPE_PK,
+            'name' => Schema::TYPE_STRING,
+            'name_search' => Schema::TYPE_STRING,
         ],$tableOptions);
 
         $this->createTable('model',[
             'id' => Schema::TYPE_PK,
             'vendor_id' => Schema::TYPE_INTEGER,
             'name' => Schema::TYPE_STRING,
+            'name_search' => Schema::TYPE_STRING,
         ],$tableOptions);
 
         $this->createTable('complectation',[
             'id' => Schema::TYPE_PK,
             'model_id' => Schema::TYPE_INTEGER,
             'name' => Schema::TYPE_STRING,
+            'name_search' => Schema::TYPE_STRING,
             'description' => Schema::TYPE_TEXT,
         ],$tableOptions);
 
